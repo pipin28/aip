@@ -44,13 +44,6 @@ include 'src/controller/approve.controller.php';
     .btn-print { background-color: #007bff; color: white; }
     .btn-excel { background-color: #ffc107; color: black; }
 
-    /* Additional print-specific CSS */
-    @media print {
-    @page {
-        size: legal landscape;
-        margin: 10mm; /* Reduce margin to allow more space */
-    }
-
     body {
         visibility: hidden;
         font-family: Arial, sans-serif;
@@ -105,18 +98,8 @@ include 'src/controller/approve.controller.php';
         font-style: italic;
     }
 
-    /* Print-specific header */
-    .print-header {
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+    
 }
-
-@media screen {
-    .print-header {
-        display: none;
-    }
 }
 
 </style>
