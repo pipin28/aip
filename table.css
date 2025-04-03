@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary: #10375c;
+  --bg-color: #f4f6ff;
+  --header-color: #2c71d8;
+  --grey-color: rgb(58, 56, 56);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.aip_header_container {
+  margin-top: 100px;
+}
+
+
+.aip-table {
+  margin-top: 10px;
+  position: relative;
+  overflow-x: scroll;
+  height: 70vh;
+  width: 1160px;
+  table {
+    width: 1160px;
+    border-collapse: separate;
+    border-spacing: 0 0; /* Space between rows */
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for the table */
+  }
+
+  th {
+    padding: 5px;
+    background-color: #2c71d8;
+    color: white;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+
+  td {
+    padding: 15px;
+    transition: background-color 0.3s; /* Smooth transition */
+    border-bottom: 1px solid #e0e0e0; /* Subtle border for separation */
+    font-size: 0.7rem;
+  }
+
+  td a {
+    text-decoration: none;
+    color: var(--header-color);
+  }
+
+  /* Style for odd rows */
+  tbody tr {
+    background-color: #ffffff; /* Light background for odd rows */
+  }
+
+  /* Style for even rows */
+  tbody tr:nth-child(even) {
+    background-color: #f7f9fc; /* Slightly darker background for even rows */
+  }
+
+  /* Hover effect */
+  tbody tr:hover td {
+    background-color: #f0f8ff; /* Light blue hover effect */
+    cursor: pointer;
+  }
+
+  /* Optional: First and last td border radius */
+  tbody tr:first-child td:first-child {
+    border-top-left-radius: 8px;
+  }
+  tbody tr:first-child td:last-child {
+    border-top-right-radius: 8px;
+  }
+  tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+  }
+  tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+  }
+}

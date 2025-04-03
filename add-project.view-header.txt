@@ -1,0 +1,15 @@
+<h4 class="form_sub_header">Header</h4>
+                                        <div class="form-row">
+                                            <div class="form-col">
+                                                <label>Department Head</label>
+                                                <input type="text" name="dept_head" value="<?php echo $department_head; ?>" placeholder="Enter head" readonly><br><br>
+                                            </div>
+                                            <div class="form-col">
+                                                <label>Budget Head:</label>
+                                                <input type="text" name="budget_head" placeholder="Enter budget person" required><br><br>
+                                            </div>
+                                            <div class="form-col">
+                                            <label>Head Executive:</label>
+                                            <input type="text" name="exe_head" placeholder="Enter executive person" required><br><br>
+                                            </div>
+                                        </div>

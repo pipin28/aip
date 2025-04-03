@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root{
+    --primary :#10375C;
+    --bg-color:#F4F6FF;
+    --header-color:#2c71d8;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-image: url(../../public/images/login.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(151, 148, 148, 0.2);
+}
+.container{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container .form-wrapper{
+    width: 700px;
+    height: auto;
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.container .form-wrapper .form-col{
+    width: 50%;
+}
+.container .form-wrapper .log-form{
+    text-align: center;
+
+}
+
+.form-wrapper .log-form .log-form-header h1{
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-align: left;
+    position: relative;
+    left: 40px;
+}
+.container .form-wrapper .log-form form{
+    padding-top: 20px;
+}
+.container .form-wrapper .log-form form h1{
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 10px;
+
+}
+.container .form-wrapper .log-form form h5{
+    color: rgb(194, 189, 189);
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.container .form-wrapper .log-form form .forgot-pass{
+    font-size: .7rem;
+    color: red;
+    text-align: right;
+    position: relative;
+    right: 55px;    
+    margin-bottom: 10px;
+}
+
+
+
+.log-form form input{
+    padding: 10px;
+    outline: none;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(202, 199, 199);
+    width: 70%;
+}
+.log-form form select{
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(202, 199, 199);
+}
+
+
+.log-form form input:invalid:not(:placeholder-shown), 
+.log-form form input:valid:not(:placeholder-shown) {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px);
+}
+.log-form form input:invalid:not(:placeholder-shown) {
+    border-color: red;
+    background-image: url(../../public/images/checked_red.png);
+}
+
+
+input:valid:not(:placeholder-shown) {
+    background-image: url(../../public/images/checked_green.png);
+    border-color: green;
+}
+
+.container .form-wrapper .log-form form button{
+    width: 70%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.form-wrapper .log-form form button:hover{
+    background-color: var(--bg-color);
+    color: black;
+}
+.form-wrapper .log-form form .sign-up{
+    font-size: .7rem;
+    text-align: right;
+    position: relative;
+    right: 55px;
+    margin-bottom: 10px;
+  
+}
+
+.form-wrapper .log-form form .sign-up a{
+    text-decoration: none;
+    color: red;
+}
+
+.form-wrapper .log-form form input:invalid ~ button[type="submit"] {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.container .form-wrapper .form-col img{
+    width: 600px;
+    height: 71vh;
+    border-radius: 5px;
+    clip-path: polygon(0 0, 63% 0, 39% 100%, 0% 100%);
+}
+
+.form-wrapper .icons{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-wrapper .icons i{
+    color: var(--primary);
+}
+
+#message {
+    display:none;
+    color: #000;
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  #message h3{
+    font-size: .8rem;
+    
+  }
+  
+  #message p {
+    font-size: 12px;
+    text-align: left;
+    position: relative;
+    left: 100px;
+  }
+
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
